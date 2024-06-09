@@ -6,9 +6,193 @@
 
 </head>
 <body>
-
 <h1>Reisebuchungs-Formular</h1>
+<form>
+  <section>
 
+    <fieldset>
+      <legend>Abflughäfen</legend>
+      <label>Abflughafen:
+
+        <select name="flughaefen" size="4">
+          <optgroup label="Flughäfen in Österreich">
+            <option label="Wien"> Flughafen Wien</option>
+            <option label="Innsbruck">Flughafen Innsbruck</option>
+            <option label="Salzburg">Flughafen Salzburg</option>
+          </optgroup>
+
+          <optgroup label="Flughäfen in Deutschland">
+            <option label="Frankfurt">Flughafen Frankfurt</option>
+            <option label="Muenchen">Flughafen München</option>
+            <option label="Duesseldorf">Flughafen Duesseldorf</option>
+          </optgroup>
+
+          <optgroup label="Flughäfen in Frankreich">
+            <option label="Paris">Flughafen Paris</option>
+            <option label="Nizza">Flughafen Nizza</option>
+            <option label="Toulouse">Flughafen Toulouse</option>
+          </optgroup>
+
+          <optgroup label="Flughäfen in Italien">
+            <option label="Milano">Flughafen Milano</option>
+            <option label="Rom">Flughafen Rom</option>
+            <option label="Venedig">Flughafen Venedig</option>
+          </optgroup>
+        </select>
+      </label>
+    </fieldset>
+  </section>
+
+  <section>
+
+    <fieldset>
+      <legend>Unterkunft</legend>
+      <input type="radio" id="ht" name="Unterkunft" value="Hotel">
+      <label for="ht">Hotel</label>
+      <input type="radio" id="ha" name="Unterkunft" value="Ferienwohnung">
+      <label for="ha">Ferienwohnung</label>
+      <input type="radio" id="AB" name="Unterkunft" value="Air BNB">
+      <label for="AB">Air BNB</label>
+    </fieldset>
+
+  </section>
+
+  <section>
+
+    <fieldset>
+      <legend>Zusätzliche Leistungen</legend>
+      <input type="checkbox" id="bf" name="ZD" value="Frühstück">
+      <label for="bf">Frühstück</label>
+      <input type="checkbox" id="at" name="ZD" value="Flughafentransfer">
+      <label for="at">Flughafentransfer</label>
+      <input type="checkbox" id="spa" name="ZD" value="SPA-Bereich">
+      <label for="spa">SPA-Bereich</label>
+      <input type="checkbox" id="eg" name="ZD" value="extra-Gepäck">
+      <label for="eg">Extra Gepäck</label>
+    </fieldset>
+
+  </section>
+
+  <section>
+
+    <fieldset>
+      <legend>Reisedaten</legend>
+      <label for="AD">Anfangsdatum Reisezeitraum:</label>
+      <input id="AD" name="datum" type="date">
+      <label for="ED">Enddatum Reisezeitraum:</label>
+      <input id="ED" name="datum" type="date">
+      <label for="RD">Reisedauer:</label>
+      <input id="RD" name="datum" type="number" min="1" max="21">
+    </fieldset>
+
+  </section>
+
+  <section>
+
+    <fieldset>
+      <legend>Anzahl Personen</legend>
+      <label for="TP">Personen:</label>
+      <input id="TP" name="persons" type="number" min="1" max="10">
+    </fieldset>
+
+  </section>
+
+  <section>
+
+    <fieldset>
+      <legend>Fluggesellschaften</legend>
+      <label>Fluggesellschaft:
+
+        <select name="fluggesellschaft" size="4">
+          <optgroup label="Fluggesellschaften in Österreich">
+            <option label="Austrian Air">Autrian Air</option>
+            <option label="Lauda">Lauda</option>
+            <option label="WIZZ">WIZZ</option>
+          </optgroup>
+
+          <optgroup label="Fluggesellschaften in Deutschland">
+            <option label="Lufthansa">Lufthansa</option>
+            <option label="Condor">Condor</option>
+            <option label="Eurowings">Eurowings</option>
+          </optgroup>
+
+          <optgroup label="Fluggesellschaften in Frankreich">
+            <option label="Air France">Air France</option>
+            <option label="Air Austral">Air Austral</option>
+            <option label="Corsair">Corsair</option>
+          </optgroup>
+
+          <optgroup label="Fluggesellschaften in Italien">
+            <option label="ITA Airways">ITA Airways</option>
+            <option label="Air Dolomiti">Air Dolomiti</option>
+            <option label="Lauda">Lauda</option>
+          </optgroup>
+        </select>
+      </label>
+    </fieldset>
+
+  </section>
+
+  <section>
+
+    <fieldset>
+      <legend>Optionale Dienstleistungen</legend>
+      <input type="checkbox" id="PCI" name="od" value="Priority Check-in">
+      <label for="PCI">Priority Check-in</label>
+      <input type="checkbox" id="ZH" name="od" value="Zusätzliches Handgepäck">
+      <label for="ZH">Zusätzliches Handgepäck</label>
+      <input type="checkbox" id="CR" name="od" value="Auto mieten">
+      <label for="CR">Auto mieten</label>
+    </fieldset>
+
+  </section>
+
+  <section>
+
+    <fieldset>
+      <legend>Reiseziele</legend>
+      <label>Reiseziel:
+        <input type="search" list="reiseziele"/>
+        <datalist id="reiseziele">
+          <option value="tokyo">Tokio, Japan</option>
+          <option value="paris">Paris, Frankreich</option>
+          <option value="new york">New York, USA</option>
+          <option value="berlin">Berlin, Deutschland</option>
+          <option value="sydney">Sydney, Australien</option>
+          <option value="cape town">Kapstadt, Südafrika</option>
+          <option value="rome">Rom, Italien</option>
+          <option value="rio">Rio de Janeiro, Brasilien</option>
+          <option value="moscow">Moskau, Russland</option>
+          <option value="cairo">Kairo, Ägypten</option>
+          <option value="london">London, Großbritannien</option>
+          <option value="madrid">Madrid, Spanien</option>
+          <option value="amsterdam">Amsterdam, Niederlande</option>
+          <option value="vienna">Wien, Österreich</option>
+          <option value="prague">Prag, Tschechien</option>
+          <option value="lisbon">Lissabon, Portugal</option>
+          <option value="athens">Athen, Griechenland</option>
+          <option value="dublin">Dublin, Irland</option>
+          <option value="budapest">Budapest, Ungarn</option>
+          <option value="stockholm">Stockholm, Schweden</option>
+          <textarea cols="20" rows="1"></textarea>
+        </datalist>
+      </label>
+    </fieldset>
+
+  </section>
+
+  <section>
+
+    <fieldset>
+      <legend>E-Mail</legend>
+      <label for="E-Mail">E-Mail:</label>
+      <input id="E-Mail" type="email" name="e-Mail">
+    </fieldset>
+
+  </section>
+  <button type="submit">Formular absenden</button>
+  <button type="reset">Alles zurücksetzen</button>
+</form>
 
 </body>
 </html>
